@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd client && npm i",
+    "build":"cd client && npm i",
     "start": "node server.js"
   },
   "keywords": [],
