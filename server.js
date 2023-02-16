@@ -14,21 +14,22 @@ let data = [
   {name:"new name 2",roll:331221},
   {name:"new name 3",roll:5321},
 ]
-
-
 let reqCount = 1;
-
 app.get("/data", (req  , res) => {
     res.json(data)
+    console.log("get request for /data");
 });
-
 app.post("/data",(req,res)=>{
   data.push({name:`new name ${++nameid}`,roll:32132})
   res.json(data)
+  console.log("post request for /data");
+
 })
 
 app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname,"client","build","index.html"))
+    console.log("roooott url");
+
 });
 
 const PORT = process.env.PORT || 5000;
